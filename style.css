@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Mono&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.text {
+    padding: 20px;
+}
+.sold {
+    transform: translateY(3px);
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.logo {
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Roboto Mono', monospace;
+}
+.sold_price {
+    height: 20px;
+    min-width: 20px;
+    border: 1px black solid;
+    padding: 3px;
+}
+
+.payment-elements {
+    margin-left: 30px;
+    display: flex;
+    /*
+    justify-content: space-between;*/
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.payment-elements div{
+    display: inline-flex;
+    padding: 10px;
+    margin: 1px;
+    border: 1px black solid;
+    margin-top: 3px;
+    border-radius: 10px;
+}
+.transactions {
+    display: flex;
+    flex-direction: column;
+}
+.transactions-elements {
+    overflow-y: scroll;
+    width: 90%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.tr {
+    display: flex;
+    height: 190px;
+    justify-content: center;
+}
+.transaction-item {
+     margin-left: 20px;
+}
+
+.modal {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    flex-direction: column;
+}
+input {
+    border: 1px solid black;
+    margin: 1px;
+    display: flex;
+    width: 150px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+}
+input:active, input:focus {
+    outline: none;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+  }
+  
+  :-moz-placeholder {
+    text-align: center;
+  }
+.submit {
+    color: white;
+}
+.close {
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    color: white;
+    width: 30px;
+}
+.button {
+    background-color: white;
+    display: flex;
+    width: auto;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.buttoncontainer {
+    display: inline-flex;
+    width: 92%;
+    margin: 5px 4%;
+    justify-content: space-between;
+}
+/*confettis*/
+.confetti{
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    user-select: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#displaymoney {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#moneyanimcontainer {
+    font-size: 60px;
+    color: purple;
+    padding: 20px;
+    font-family: 'Roboto Mono', monospace;
+}

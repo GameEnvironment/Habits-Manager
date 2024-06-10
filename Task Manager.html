@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+</style>
+</head>
+
+<body>
+    <canvas class="confetti" id="canvas"></canvas>
+    <div id="displaymoney"></div>
+    <div class="content">
+        <div class="header">
+            <div class="logo">Tasks Manager</div>
+            <div class="sold">
+                <div class="text">
+                    Actual account:
+                </div>
+                <div class="sold_price" id="price_sold"></div>
+            </div>
+        </div>
+        <div class="rewards">
+            <div class="text"><u>Rewards:</u></div>
+            <div class="payment-elements">
+                <div class="basic_study" onclick="transaction('Study', 1)" >30min study</div>
+                <div class="basic_meditate" onclick="transaction('Meditation', 1)">10min meditation</div>
+                <div class="basic_guitare" onclick="transaction('Music', 1)">10min music</div>
+                <div class="basic_reading" onclick="transaction('Sport', 1)">10min sport</div>
+                <div class="basic_pompes" onclick="transaction('Reading', 1)">10min reading</div>
+                <div class="other" onclick="modalprint1()">other</div>
+            </div>
+        </div>
+        <div class="salary">
+            <div class="text"><u>Pleasures:</u></div>
+            <div class="payment-elements">
+                <div class="basic_tel element-text" onclick="transaction('Phone', -1)">30min phone</div>
+                <div class="basic_play element-text" onclick="transaction('Video games', -1)">30min vide games</div>
+                <div class="basic_tv element-text" onclick="transaction('Tv', -1)">30min Tv</div>
+                <div class='basic_taxes element-text' onclick="transaction('Junk food', -1)">Junk food</div>
+                <div class="other element-text" onclick="modalprint2()">other</div>
+            </div>
+        </div>
+        <div class="transactions">
+            <div class="text"><u>Events:</u></div>
+            <div class="tr">
+                <div class="transactions-elements"></div>
+            </div>
+        </div>
+        <div class="modal">
+            <input type="text" name="modalanstypeplus" id="modalanstypeplus" placeholder="activity">
+            <input type="number" name="modalanspriceplus" id="modalanspriceplus" placeholder="price">
+            <div class="submit" onclick="transactionspecialplus()">submit</div>
+            <span id="close1" class="close">&times;</span>
+        </div>
+        <div class="modal">
+            <input type="text" name="modalanstypeminus" id="modalanstypeminus" placeholder="activity">
+            <input type="number" name="modalanspriceminus" id="modalanspriceminus" placeholder="price">
+            <div class="submit" onclick="transactionspecialminus()">submit</div>
+            <span id="close2" class="close">&times;</span>
+        </div>
+        <div class="buttoncontainer">
+            <input type="button" class="button" value="start" onclick="start()">
+            <input type="button" class="button" value="delete last" onclick="deletelastitem()">
+        </div>
+    </div>
+</body>
+<script src="script.js">
+</script>
+</html>
